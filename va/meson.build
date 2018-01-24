@@ -227,13 +227,13 @@ if WITH_WAYLAND
       'wayland-drm-client-protocol.c',
       output : 'wayland-drm-client-protocol.c',
       input : 'wayland/wayland-drm.xml',
-      command : [wl_scanner, 'code', '@INPUT@', '@OUTPUT@']),
+      command : [ wl_scanner, 'code', '@INPUT@', '@OUTPUT@' ]),
 
     custom_target(
       'wayland-drm-client-protocol.h',
       output : 'wayland-drm-client-protocol.h',
       input : 'wayland/wayland-drm.xml',
-      command : [wl_scanner, 'client-header', '@INPUT@', '@OUTPUT@'])
+      command : [ wl_scanner, 'client-header', '@INPUT@', '@OUTPUT@' ])
   ]
 
   install_headers(libva_wayland_headers, subdir : 'va')
